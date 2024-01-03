@@ -22,4 +22,5 @@ In my free time, I'm mostly occupied with:
  - Travelling, as often as possible
  - Watching a movie and then looking up its Trivia section on IMDB
 
+___
 [^1]: I'm fortunate to hold a personal [FWO fellowship](https://www.fwo.be/en/fellowships-funding/phd-fellowships/phd-fellowship-fundamental-research/) to fund my endeavors until late 2027. As a result, I'm not allowed to receive remuneration from any other institute for work related to my research.
