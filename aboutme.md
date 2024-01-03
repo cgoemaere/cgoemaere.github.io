@@ -1,16 +1,25 @@
 ---
 layout: page
 title: About me
-subtitle: Why you'd want to go on a date with me
 ---
 
-My name is Inigo Montoya. I have the following qualities:
 
-- I rock a great mustache
-- I'm extremely loyal to my family
+Hi there, I'm Cédric.
 
-What else do you need?
+I'm a second-year PhD student at [Ghent University](https://www.ugent.be/en) and part of the [T2K group](https://ugentt2k.github.io/), supervised by prof. [Thomas Demeester](https://tdmeeste.github.io/).
 
-### My story
+My research focuses on developing stable machine learning algorithms for analog electronics.
+Specifically, I work on Hopfield networks and Equilibrium Propagation, and I'm exploring their link with Deep Equilibrium Models (DEQs).
 
-To be honest, I'm having some trouble remembering right now, so why don't you just watch [my movie](https://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29) and it will answer **all** your questions.
+I'm always open to collaborations and unpaid[^1] internships, so feel free to contact me via email or Twitter. My contact details can be found at the bottom of the page.
+
+## Personal life
+In my free time, I'm mostly occupied with:
+
+ - Volunteering at [Kazou](https://www.kazou.be/) as part of the board and as (chief) camp counselor
+ - Running recreationally (HM in 1:54:31)
+ - Catching up with friends
+ - Travelling, as often as possible
+ - Watching a movie and then looking up its Trivia section on IMDB
+
+[^1]: I'm fortunate to hold a personal [FWO fellowship](https://www.fwo.be/en/fellowships-funding/phd-fellowships/phd-fellowship-fundamental-research/) to fund my endeavors until late 2027. As a result, I'm not allowed to receive remuneration from any other institute for work related to my research.
