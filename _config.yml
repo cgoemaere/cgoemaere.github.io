@@ -10,10 +10,10 @@
 ############################
 
 # Name of website
-title: My Website
+title: Cédric Goemaere
 
 # Your name to show in the footer
-author: Some Person
+author: Cédric Goemaere
 
 ###############################################
 # --- List of links in the navigation bar --- #
@@ -21,10 +21,8 @@ author: Some Person
 
 navbar-links:
   About Me: "aboutme"
-  Resources:
-    - Beautiful Jekyll: "https://beautifuljekyll.com"
-    - Learn markdown: "https://www.markdowntutorial.com/"
-  Author's home: "https://deanattali.com"
+  # Publications: "publications"
+  # CV: "CV.pdf"
 
 ################
 # --- Logo --- #
@@ -50,16 +48,16 @@ round-avatar: true
 # You can change the order that they show up on the page by changing the order here.
 # Uncomment the links you want to show and add your information to each one.
 social-network-links:
-  email: "someone@example.com"
+  email: "cedric.goemaere@ugent.be"
   rss: true  # remove this line if you don't want to show an RSS link at the bottom
-  facebook: deanattali
-  github: daattali
-  twitter: daattali
-  patreon: DeanAttali
-  youtube: "@daattali"
+  # facebook: deanattali
+  github: cgoemaere
+  twitter: C_Goemaere
+  # patreon: DeanAttali
+  # youtube: "@daattali"
 #  medium: yourname
 #  reddit: yourname
-#  linkedin: daattali
+  linkedin: cedric-goemaere
 #  xing: yourname
 #  stackoverflow: "3943160/daattali"
 #  snapchat: deanat78
@@ -73,8 +71,8 @@ social-network-links:
 #  calendly: yourname
 #  mastodon: instance.url/@username
 #  bluesky: yourname
-#  ORCID: your ORCID ID
-#  google-scholar: your google scholar
+  ORCID: 0000-0001-7308-2885
+  google-scholar: 4BQ4DZsAAAAJ
 #  discord: "invite_code" or "users/userid" or "invite/invite_code" 
 #  kaggle: yourname
 #  hackerrank: yourname
@@ -82,7 +80,7 @@ social-network-links:
 
 # If you want your website to generate an RSS feed, provide a description
 # The URL for the feed will be https://<your_website>/feed.xml
-rss-description: This website is a virtual proof that I'm awesome
+rss-description: An outlet for my brain
 
 ###########################
 # --- General options --- #
@@ -91,13 +89,13 @@ rss-description: This website is a virtual proof that I'm awesome
 # Select which social network share links to show in posts
 share-links-active:
   twitter: true
-  facebook: true
+  facebook: false
   linkedin: true
   vk: false
 
 # How to display the link to your website in the footer
 # Remove this if you don't want a link in the footer
-url-pretty: "MyWebsite.com"
+url-pretty: "Homepage"
 
 # Excerpt word length - Truncate the excerpt of each post on the feed page to the specified number of words
 excerpt_length: 50
@@ -120,7 +118,7 @@ edit_page_button: true
 navbar-var-length: false
 
 # The keywords to associate with your website, for SEO purposes
-#keywords: "my,list,of,keywords"
+keywords: "Cédric Goemaere,blog,Hopfield networks,Equilibrium Propagation,DEQ,Deep Equilibrium Model"
 
 ######################################
 # --- Colours / background image --- #
@@ -169,7 +167,7 @@ footer-hover-col: "#0085A1"
 #cloudflare_analytics: ""
 
 # Google Tag Manager ID
-#gtm: ""
+gtm: "GTM-P6K2Z6CC"
 
 # Matomo (aka Piwik) Web statistics
 # Uncomment the following section to enable Matomo. The opt-out parameter controls
@@ -252,7 +250,7 @@ date_format: "%B %-d, %Y"
 #################################################################################
 
 # Output options (more information on Jekyll's site)
-timezone: "America/Toronto"
+timezone: "Europe/Brussels"
 markdown: kramdown
 highlighter: rouge
 permalink: /:year-:month-:day-:title/
