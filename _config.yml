@@ -21,7 +21,7 @@ author: Cédric Goemaere
 
 navbar-links:
   About Me: "aboutme"
-  # Publications: "publications"
+  Publications: "publications"
   # CV: "CV.pdf"
 
 ################
