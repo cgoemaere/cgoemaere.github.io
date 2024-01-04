@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Publications
+head-extra: head-custom.html
 ---
 
 Here is a list of my current publications. Be sure to check out my [‪Google Scholar‬](https://scholar.google.be/citations?user=4BQ4DZsAAAAJ) page for a (probably) more updated version.
