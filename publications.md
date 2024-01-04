@@ -6,7 +6,7 @@ head-extra: mathjax.html
 
 Here is a list of my current publications. Be sure to check out my [Google Scholar](https://scholar.google.be/citations?user=4BQ4DZsAAAAJ) page for a (probably) more updated version.
 
-**Accelerating Hierarchical Associative Memory: A Deep Equilibrium Approach** (2023)  **<font color='green'>NeurIPS 2023 -- AMHN workshop</font>** [[**[ArXiv]**](https://arxiv.org/abs/2311.15673)]{style="float:right"} \
+**Accelerating Hierarchical Associative Memory: A Deep Equilibrium Approach** (2023)  **<font color='green'>NeurIPS 2023 -- AMHN workshop</font>** <p align="right">[**[ArXiv]**](https://arxiv.org/abs/2311.15673)</p> \
 **Cédric Goemaere**, Johannes Deleu, Thomas Demeester
 
 We show that (Hierarchical) Associative Memory can be cast as a Deep Equilibrium Model. Moreover, we identify and resolve a redundancy in synchronous updates of HAMs, and show that this boils down to parallellizing asynchronous updates.
