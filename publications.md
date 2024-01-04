@@ -17,4 +17,4 @@ We show that (Hierarchical) Associative Memory can be cast as a Deep Equilibrium
 Felix Koulischer, **Cédric Goemaere**, Tom Van Der Meersch, Johannes Deleu, Thomas Demeester
 
 We investigate the role of the temperature parameter $\beta$ in Modern Hopfield Networks, and identify two behavioral regimes, with a phase transition determined by a critical temperature $\beta_c$. \
-*This work stems from Felix's master thesis, which I supervised together with Thomas.*
+*This work stems from Felix's Master's thesis, which I supervised together with Thomas.*
