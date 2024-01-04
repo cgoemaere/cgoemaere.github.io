@@ -7,6 +7,7 @@ head-extra: mathjax.html
 Here is a list of my current publications. Be sure to check out my [‪Google Scholar‬](https://scholar.google.be/citations?user=4BQ4DZsAAAAJ) page for a (probably) more updated version.
 
 **Accelerating Hierarchical Associative Memory: A Deep Equilibrium Approach** (2023)
+<code style="color : green">NeurIPS 2023 -- AMHN workshop</code>
 **<font color='green'>NeurIPS 2023 -- AMHN workshop</font>** [[ArXiv]](https://arxiv.org/abs/2311.15673)
 **Cédric Goemaere**, Johannes Deleu, Thomas Demeester
 
