@@ -25,10 +25,11 @@ We investigate the role of the temperature parameter $\beta$ in Modern Hopfield 
 **<font color='green'>BNAIC/BeNeLearn 2022 - Thesis abstract</font>**  [**[Proceedings]**](https://bnaic2022.uantwerpen.be/wp-content/uploads/BNAICBeNeLearn_2022_submission_4135.pdf) \
 **Cédric Goemaere**, Thomas Demeester, Tim Verbelen, Bart Dhoedt, Cedric De Boom
 
-My Master's thesis looks into the problem of keyword generation: given a context prompt, generate a fluent completion that contains a pre-specified keyword. In contrast to previous methods that looked into fine-tuning (parts of) a pretrained LM, I show that keyword generation can be achieved more efficiently by working directly on the logits of the unmodified LM. I propose 4 simple models: one based on a target-specific prior, another based on the FastText similarity between the target and (every token in) the vocabulary[^masterthesis1], and finally two combinations of these two. Training happens on a per-target basis, where the loss maintains the likelihood of the generated sentence if it contains the keyword, or drives it to zero otherwise[^masterthesis2]. After training, the generated sentences contain the target keyword in 10-50% of the cases (depending on the chosen model and target), with minimal degradation in fluency. Thanks to their simplicity, the trained models can easily be interpreted, providing more insight into their inner workings.
+My Master's thesis looks into the problem of keyword generation: given a context prompt, generate a fluent completion that contains a pre-specified keyword. \
+> An example of keyword generation: complete the sentence "*As I was walking across the*" such that it contains the keyword "*analysis*". One correct solution would be "*As I was walking across the* lab, I noticed the computer had already finished its *analysis* of the substrate."
 
-*An example of keyword generation: complete the sentence "As I was walking across the " such that it contains the keyword "analysis". While there are a huge number of possible solutions, this is still quite a hard problem to solve. One correct solution would be "As I was walking across the lab, I noticed the computer had already finished its analysis of the substrate."*
+In contrast to prior work on fine-tuning (parts of) a pretrained LM, I show that keyword generation can be achieved more efficiently by working directly on the logits of the unmodified LM. I propose 4 simple, interpretable models: one based on a target-specific prior, another based on the FastText similarity between the target and (every token in) the vocabulary, and finally two combinations of these two.
 
-___
-[^masterthesis1]: Fun fact: this model contains only 65 trainable parameters!
-[^masterthesis2]: In hindsight, this is equivalent to using [DPO](https://arxiv.org/abs/2305.18290) and setting the reward $r$ to zero if the sentence $s$ contains the keyword $k$, and to $-\infty$ otherwise (i.e., $r=\log(I(k \ in s))$).
+**Fun fact**: the second model contains only 65 trainable parameters and demonstrates zero-shot generalization!
+
+**Afterthought**: the simple training procedure I used is mathematically equivalent to using [DPO](https://arxiv.org/abs/2305.18290) where the reward $r$ is zero if the sentence $s$ contains the keyword $k$, and $-\infty$ otherwise (i.e., $r=\log(\mathbb{1}(k \in s))$).
