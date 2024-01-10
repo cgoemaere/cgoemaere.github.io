@@ -25,11 +25,11 @@ We investigate the role of the temperature parameter $\beta$ in Modern Hopfield 
 **<font color='green'>BNAIC/BeNeLearn 2022 - Thesis abstract</font>**  [**[Proceedings]**](https://bnaic2022.uantwerpen.be/wp-content/uploads/BNAICBeNeLearn_2022_submission_4135.pdf) \
 **Cédric Goemaere**, Thomas Demeester, Tim Verbelen, Bart Dhoedt, Cedric De Boom
 
-My Master's thesis looks into the problem of keyword generation: given a context prompt, generate a fluent completion that contains a pre-specified keyword. \
-> An example of keyword generation: complete the sentence "*As I was walking across the*" such that it contains the keyword "*analysis*". One correct solution would be "*As I was walking across the* lab, I noticed the computer had already finished its *analysis* of the substrate."
-
+My Master's thesis looks into the problem of keyword generation: given the start of a sentence, generate a fluent completion that contains a pre-specified target keyword. \
 In contrast to prior work on fine-tuning (parts of) a pretrained LM, I show that keyword generation can be achieved more efficiently by working directly on the logits of the unmodified LM. I propose 4 simple, interpretable models: one based on a target-specific prior, another based on the FastText similarity between the target and (every token in) the vocabulary, and finally two combinations of these two.
 
-**Fun fact**: the second model contains only 65 trainable parameters and demonstrates zero-shot generalization!
+**Example**: complete the sentence "*As I was walking across the*" such that it contains the keyword "*analysis*". One correct solution would be "*As I was walking across the* lab, I noticed the computer had already finished its *analysis* of the substrate."
 
-**Afterthought**: the simple training procedure I used is mathematically equivalent to using [DPO](https://arxiv.org/abs/2305.18290) where the reward $r$ is zero if the sentence $s$ contains the keyword $k$, and $-\infty$ otherwise (i.e., $r=\log(\mathbb{1}(k \in s))$).
+**Fun fact**: the second model contains only 65 trainable parameters and demonstrates zero-shot generalization
+
+**Afterthought**: the simple training procedure I used is mathematically equivalent to using [DPO](https://arxiv.org/abs/2305.18290) where the reward $r$ is zero if the sentence $s$ contains the keyword $k$, and $-\infty$ otherwise (i.e., $r=\log(\mathbb{1}(k \in s))$ ).
