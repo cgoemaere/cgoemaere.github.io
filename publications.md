@@ -6,8 +6,14 @@ head-extra: mathjax.html
 
 Here is a list of my current publications. Be sure to check out my [Google Scholar](https://scholar.google.be/citations?user=4BQ4DZsAAAAJ) page for a (probably) more updated version.
 
+**Accelerating Hopfield Network Dynamics: Beyond Synchronous Updates and Forward Euler** (2024) \
+**<font color='green'>ECAI 2024 - ML-DE workshop</font>**  [**[ArXiv]**](https://arxiv.org/abs/2311.15673v2)  [**[PMLR]**](https://proceedings.mlr.press/v255/goemaere24a.html)  [**[GitHub]**](https://github.com/cgoemaere/hopdeq) \
+**Cédric Goemaere**, Johannes Deleu, Thomas Demeester
+
+This work greatly expands the scope of the NeurIPS workshop paper below. It provides an accessible introduction to Hopfield networks and also considers the case of the Continuous Hopfield network (which we prove are just fancy HAMs). The theoretical analysis is much more substantial and rigorous, and we added a ton more experimental results (which required some tinkering with the learning rates).
+
 **Accelerating Hierarchical Associative Memory: A Deep Equilibrium Approach** (2023) \
-**<font color='green'>NeurIPS 2023 - AMHN workshop</font>**  [**[ArXiv]**](https://arxiv.org/abs/2311.15673)  [**[OpenReview]**](https://openreview.net/forum?id=Vmndp6HnfR) \
+**<font color='green'>NeurIPS 2023 - AMHN workshop</font>**  [**[ArXiv]**](https://arxiv.org/abs/2311.15673v1)  [**[OpenReview]**](https://openreview.net/forum?id=Vmndp6HnfR)  [**[GitHub]**](https://github.com/cgoemaere/hopdeq/tree/NeurIPS23_AMHN_workshop_code) \
 **Cédric Goemaere**, Johannes Deleu, Thomas Demeester
 
 We show that (Hierarchical) Associative Memory can be cast as a Deep Equilibrium Model. Moreover, we identify and resolve a redundancy in synchronous updates of HAMs, and show that our solution boils down to parallellizing asynchronous updates.
