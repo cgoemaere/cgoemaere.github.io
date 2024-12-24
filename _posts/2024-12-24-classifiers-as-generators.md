@@ -33,7 +33,7 @@ To fix this, we need to stop relying on softmax probabilities and instead look a
 1.  How strongly the target expert thinks $x$ belongs to its class.
 2.  How realistic the image is overall, regardless of class.
 
-For point 2, we can use the LogSumExp to get an unnormalized estimate for $\log p(x)$, the data distribution. This works because every expert can be considered an energy-based model, with energy $E_{x,y_i} = -\text{logits}_i \propto -\log p(x \|y = i)$. Given that $p(x) = \sum_i  p(x \|y = i)$, we find that $\log p(x) = \log \sum_i \exp (-E_{x,y_i})$, or thus, the LogSumExp of the logits.
+For point 2, we can use the LogSumExp to get an unnormalized estimate for $\log p(x)$, the data distribution. This works because every expert can be considered an energy-based model, with energy `$E_{x,y_i} = -\text{logits}_i \propto -\log p(x \|y = i)`$. Given that `$p(x) = \sum_i  p(x \|y = i)`$, we find that `$\log p(x) = \log \sum_i \exp (-E_{x,y_i})`$, or thus, the LogSumExp of the logits.
 
 But wait, can a classifier do this out-of-the-box? It might seem that it's not trained to do this—but that's not true. You see, the matrix multiplication guarantees the independence of every expert $W_i$. And if all experts agree that $x$ is not in their class, we must conclude that $x$ lies outside the data distribution.
 
