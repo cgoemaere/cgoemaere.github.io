@@ -39,7 +39,7 @@ But wait, can a classifier do this out-of-the-box? It might seem that it's not t
 
 ## Naive approach revisited: direct input optimization on _logits_
 Let's take another look at our naive approach from the perspective of logits. Suppose we use a cross-entropy loss with a one-hot label at class $i$. Writing our loss in terms of logits, we find:\
-\[\text{loss} = -\text{logits}_i  + \text{LogSumExp}(\text{logits})\]
+\\[\text{loss} = -\text{logits}_i  + \text{LogSumExp}(\text{logits})\\]
 
 Minimizing this loss means
 1. Maximizing the logit from our desired class
@@ -48,7 +48,7 @@ Minimizing this loss means
 Notice that the second term _actively discourages_ realistic images! During training, this term makes sense: we want to push away all non-target experts. But for generation, this is clearly the wrong loss to optimize.
 
 Let's make the simple modification of encouraging realistic images:\
-\[\text{loss} = -\text{logits}_i  - \text{LogSumExp}(\text{logits})\]
+\\[\text{loss} = -\text{logits}_i  - \text{LogSumExp}(\text{logits})\\]
 
 Using this loss, we can finally generate a somewhat recognizable zero![^1]
 
