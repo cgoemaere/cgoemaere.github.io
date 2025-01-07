@@ -6,7 +6,7 @@ title: About me
 
 Hi there, I'm Cédric.
 
-I'm a second-year PhD student at [Ghent University](https://www.ugent.be/en) and part of the [T2K group](https://ugentt2k.github.io/), supervised by prof. [Thomas Demeester](https://tdmeeste.github.io/).
+I'm a third-year PhD student at [Ghent University](https://www.ugent.be/en) and part of the [T2K group](https://ugentt2k.github.io/), supervised by prof. [Thomas Demeester](https://tdmeeste.github.io/).
 
 My research focuses on developing stable machine learning algorithms for analog electronics.
 Specifically, I work on Hopfield networks and Equilibrium Propagation, and I'm exploring their link with Deep Equilibrium Models (DEQs).
