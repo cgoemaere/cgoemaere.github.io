@@ -41,7 +41,7 @@ In my effort to gain intuition around Hopfield networks, I bumped into several l
 ### Hopfield networks are literal databases
 By definition, Hopfield networks are memory models. They store patterns as vectors in their weights and retrieve them when given a query. Want to store a new pattern? No problem! Just add it to the weights! _(I'm not kidding, this is actually how it's done)_
 
-In that sense, a Hopfield network is no different from a database that literally stores all training patterns. Retrieval is simple: compare the given query to all memories in the database using a similarity metric (e.g., dot product is typically used) and return the most similar item (i.e., an $\arg\max$ operation).
+In that sense, a Hopfield network is no different from a database that literally stores all training patterns. Retrieval is simple: compare the given query to all memories in the database using a similarity metric (e.g., dot product is typically used) and return the most similar item (i.e., an argmax operation).
 
 In fact, this perfect argmax Hopfield network already exists and is very successful. It's called Vector Quantization and is used in [VQ-VAEs](https://arxiv.org/abs/1711.00937) and [VQ-GANs](https://arxiv.org/abs/2012.09841). _(though it is typically not referred to as a Hopfield network)_
 
