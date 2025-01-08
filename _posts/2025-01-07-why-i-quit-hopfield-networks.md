@@ -43,7 +43,8 @@ By definition, Hopfield networks are memory models. They store patterns as vecto
 
 In that sense, a Hopfield network is no different from a database that literally stores all training patterns. Retrieval is simple: compare the given query to all memories in the database using a similarity metric (e.g., dot product is typically used) and return the most similar item (i.e., an argmax operation).
 
-In fact, this perfect argmax Hopfield network already exists and is very successful. It's called Vector Quantization and is used in [VQ-VAEs](https://arxiv.org/abs/1711.00937) and [VQ-GANs](https://arxiv.org/abs/2012.09841). _(though it is typically not referred to as a Hopfield network)_
+{: .box-note}
+**Note:** this perfect argmax Hopfield network already exists and is very successful. It's called Vector Quantization and is used in [VQ-VAEs](https://arxiv.org/abs/1711.00937) and [VQ-GANs](https://arxiv.org/abs/2012.09841). _(though it is typically not referred to as a Hopfield network)_
 
 For reasons that are not entirely clear to me, people have strictly avoided using the argmax operator — perhaps because it cannot be implemented in analog hardware or in the brain. In the '80s and '90s, most people used signum or sigmoid as selection operator instead of argmax. Of course, this can result in fuzzy retrievals, up to the point where adding more patterns is pointless, because there are always other spurious patterns 'close enough' to interfere. This resulted in the concept of [storage capacity](https://www.frontiersin.org/journals/computational-neuroscience/articles/10.3389/fncom.2016.00144/full), which naturally depends on the dimensionality of the stored patterns (higher dimensionality = more space between two random patterns = less spurious patterns).
 
