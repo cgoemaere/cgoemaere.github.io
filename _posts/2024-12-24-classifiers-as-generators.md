@@ -2,6 +2,7 @@
 layout: post
 title: "Classifiers as generators: ditch the softmax!"
 head-extra: mathjax.html
+readtime: true
 ---
 
 This post was inspired by [Your Classifier is Secretly an Energy Based Model and You Should Treat it Like One](https://arxiv.org/abs/1912.03263). It made me rethink how image classifiers work—it’s much more nuanced than you might suspect.

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Why I stopped working on Hopfield networks"
+readtime: true
 ---
 
 The first year of my PhD eventually became a full deep dive into Hopfield networks. These neural networks, inspired by biological memory, promise a new direction for AI that is more biologically plausible than traditional Deep Learning — and significantly more energy-efficient. And yet, after that first year, I shifted my focus to Predictive Coding networks and haven't looked back. This post is a reflection on my journey, the allure of Hopfield networks, and why I ultimately decided to move on.
