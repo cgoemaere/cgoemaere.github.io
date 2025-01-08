@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Not my first blog post: why blogging matters"
+subtitle: "Verba volant, scripta manent"
 ---
 
 Okay, maybe this *is* my first blog post. At least, on my new website! (I'm way too proud of having this thing up and running)
