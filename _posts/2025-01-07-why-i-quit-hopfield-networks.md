@@ -65,17 +65,6 @@ Yet somehow, this lesson hasn't made its way into the Hopfield networks communit
 
 I'm not sure what to think of this, but it seems like a bad idea to use pixelwise image comparison as the basis of your model.
 
-### Hopfield networks are probably _not_ biologically plausible
-While Hopfield networks were inspired by the brain, some aspects make me question their biological plausibility.
-
-Humans are very much capable of constantly creating new memories — much to our regret, sometimes. It seems unlikely that we create entirely new independent synaptic connections for every new memory, and yet, that is exactly what Hopfield networks would do.
-
-Another thing: when you remember something, how often do you get two memories mixed up into some weird hybrid? Not very often, right? Well, classical Hopfield networks do. A lot.
-
-What about Modern Hopfield networks? Maybe our brain uses softmax? Probably not. Softmax is not a local operator: it needs to look at _every single memory_ at once to be able to pick the best one. Supposedly, this could be solved with astrocyte cells (which would even make [Transformers biologically plausible](https://www.pnas.org/doi/10.1073/pnas.2219150120)), because they go beyond simple two-neuron interactions. To me, that feels like a quite a stretch. 
-
-My only possible conclusion: Hopfield networks are likely not what the brain does.
-
 ### Memory networks don't generalize
 
 Once again, repeat after me: "Hopfield networks are memory models."
@@ -94,10 +83,21 @@ But the Hopfield network community seems to work in isolation. Take the [Energy 
 
 It is absolutely crucial to track the necessary DEQ metrics. After all, it's too easy to train a lousy model, if you're not checking for training stability or model convergence. Unfortunately, most Hopfield networks papers don't report these metrics, making it difficult to validate their baselines and conclusions.
 
+### Hopfield networks are probably _not_ biologically plausible
+While Hopfield networks were inspired by the brain, some aspects make me question their biological plausibility.
+
+Humans are very much capable of constantly creating new memories — much to our regret, sometimes. It seems unlikely that we create entirely new independent synaptic connections for every new memory, and yet, that is exactly what Hopfield networks would do.
+
+Another thing: when you remember something, how often do you get two memories mixed up into some weird hybrid? Not very often, right? Well, classical Hopfield networks do. A lot.
+
+What about Modern Hopfield networks? Maybe our brain uses softmax? Probably not. Softmax is not a local operator: it needs to look at _every single memory_ at once to be able to pick the best one. Supposedly, this could be solved with astrocyte cells (which would even make [Transformers biologically plausible](https://www.pnas.org/doi/10.1073/pnas.2219150120)), because they go beyond simple two-neuron interactions. To me, that feels like a quite a stretch. 
+
+My only possible conclusion: Hopfield networks are likely not what the brain does.
+
 ### Equilibrium Propagation is just a really good approximation of backprop, nothing more
 Most Hopfield network researchers use standard backpropagation for training. But for analog hardware, there's this alternative called [Equilibrium Propagation](https://arxiv.org/abs/1602.05179) (EqProp), remember?
 
-[Some](https://openreview.net/forum?id=jl5a3t78Uh) compare EqProp directly with backprop, as if they're completely different things. But here's the thing: EqProp is actually just a clever way to approximate backprop that works on analog hardware. That's not a criticism — it's actually great! It means we can get backprop-like training even on devices where traditional backprop wouldn't work.
+[Some](https://openreview.net/forum?id=jl5a3t78Uh) compare EqProp directly with [backprop](https://en.wikipedia.org/wiki/Almeida-Pineda_recurrent_backpropagation), as if they're completely different things. But here's the thing: EqProp is actually just a clever way to approximate backprop that works on analog hardware. That's not a criticism — it's actually great! It means we can get backprop-like training even on devices where traditional backprop wouldn't work.
 
 But it's important to understand what EqProp really is and that it shares the same limitations as backprop. You still need labeled data, you still need to go through all layers and you still need two separate phases (though you can [parallellize them in space](https://arxiv.org/abs/2108.00275)).
 
