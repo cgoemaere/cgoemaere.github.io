@@ -39,3 +39,6 @@ In contrast to prior work on fine-tuning (parts of) a pretrained LM, I show that
 **Fun fact**: the second model contains only 65 trainable parameters and demonstrates zero-shot generalization
 
 **Afterthought**: the simple training procedure I used is mathematically equivalent to using [DPO](https://arxiv.org/abs/2305.18290) where the reward $r$ is zero if the sentence $s$ contains the keyword $k$, and $-\infty$ otherwise (i.e., $r=\log(\mathbb{1}(k \in s))$ ).
+
+# Services
+- [NeurIPS 2023 - AMHN workshop](https://amhn.vizhub.ai/)
