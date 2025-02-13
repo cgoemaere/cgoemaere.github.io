@@ -296,6 +296,7 @@ exclude:
 
 plugins:
   - jekyll-paginate
+  - jekyll-seo-tag
   - jekyll-sitemap
 
 # Beautiful Jekyll / Dean Attali
