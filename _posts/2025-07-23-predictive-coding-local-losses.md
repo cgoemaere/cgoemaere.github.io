@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Predictive Coding as backprop with local losses"
+head-extra: mathjax.html
 ---
 
 Deep Learning has been massively successful in recent years, in part because of the efficiency of its learning algorithm: backpropagation. However, the brain is also pretty good at learning<sup>_(citation needed)_</sup>, and it's [definitely](https://pubmed.ncbi.nlm.nih.gov/30704969/) _not_ doing backprop. One theory for how the brain learns, is Predictive Coding (PC), which has recently been repurposed as a biologically-plausible alternative to backpropagation. 
@@ -24,7 +25,7 @@ However, in order to be biologically plausible, every neuron must have a learnin
 Now, instead of perfectly forwarding a layer's prediction $\mathbf{\hat{s}_i}$, we allow some slack. We introduce a free variable $\mathbf{s_i}$, representing the input of the next layer. The local loss $\mathcal{L}_i$ tries to tie $\mathbf{\hat{s}_i}$ and $\mathbf{s_i}$ together as closely as possible, but they don't necessarily have to be equal to one another.
 
 During training, PC tries to find the set of states $\{\mathbf{s_i}\}$ that minimizes _the sum_ of all of these local losses (typically referred to as the energy $E$):\
-\\[\mathcal{L}_{PC} = \sum_i \mathcal{L}_i + \mathcal{L}_{class}\\]\
+\\[\mathcal{L}_{PC} = \sum_i \mathcal{L}_i + \mathcal{L}_{class}\\]
 _(note that the classification loss has simply become the local loss for the top layer)_
 
 With that set of optimal states (typically found via gradient descent), you can perform purely local weight updates which are 100% biologically plausible.
@@ -42,7 +43,7 @@ Well, glad you asked. Let's clear up some confusion and list up some direct cons
 - **Do other losses lead to other models?** Yes! For example, you can get the Continuous Hopfield network from [Bengio](https://arxiv.org/pdf/1510.02777) by using the loss $\mathcal{L}_i  = \frac{1}{2} \|\|\mathbf{s_i}\|\|^2 - \rho(\mathbf{s_i})^T \cdot \mathbf{\hat{s}_i}$.
 - **Can I use a _trainable_ loss?** If you take into account the caveats above, yes you can! For example, you could use a 2D normalizing flow as a componentwise loss. However, the caveats are not always easy to enforce, so you'd have to engineer your way around them.
 - **Why are local losses enough for global learning?** Turns out there's no need for backprop's global loss, just some time to spread the information across the local losses. Once that's done, every layer has its own loss to minimize, as if we had a bunch of parallel 1-layer networks trying to predict a fixed target. I find this pretty remarkable, to be honest!
-- **Which one is greater: the PC energy or the backprop loss?** With standard initialization (which amounts to setting all \[\mathcal{L}_i = 0\]), the PC energy at the start will be exactly equal to the backprop loss. Next, we do energy minimization, so we can say that the energy will always be lower than the loss. Probably, the ratio \[E/\mathcal{L}_{class}\] can be interpreted as something interesting, but I'm not sure what exactly.
+- **Which one is greater: the PC energy or the backprop loss?** With standard initialization (which amounts to setting all \\(\mathcal{L}_i = 0\\)), the PC energy at the start will be exactly equal to the backprop loss. Next, we do energy minimization, so we can say that the energy will always be lower than the loss. Probably, the ratio \\(E/\mathcal{L}_{class}\\) can be interpreted as something interesting, but I'm not sure what exactly.
 - **How should I implement PC?** If you're not planning on doing anything too fancy, inserting local losses is enough! Most DL frameworks were designed to minimize losses, so it shouldn't be too much of a hassle.  The core of my [implementation](https://github.com/cgoemaere/pc_error_optimization) consists of only around 200 lines.
 
 ## Going beyond local losses: minimal-norm perturbations
