@@ -1,4 +1,8 @@
-# Predictive Coding as backprop with local losses
+---
+layout: post
+title: "Predictive Coding as backprop with local losses"
+---
+
 Deep Learning has been massively successful in recent years, in part because of the efficiency of its learning algorithm: backpropagation. However, the brain is also pretty good at learning<sup>_(citation needed)_</sup>, and it's [definitely](https://pubmed.ncbi.nlm.nih.gov/30704969/) _not_ doing backprop. One theory for how the brain learns, is Predictive Coding (PC), which has recently been repurposed as a biologically-plausible alternative to backpropagation. 
 
 Coming from theoretical neuroscience, PC is often described in overly complicated and confusing ways, with [free energies](https://pmc.ncbi.nlm.nih.gov/articles/PMC2666703/) and [variational inference](https://arxiv.org/abs/2107.12979). While technically correct, it's not very helpful to gain intuition on how PC works, and it might scare off newcomers looking for entry into the field.
