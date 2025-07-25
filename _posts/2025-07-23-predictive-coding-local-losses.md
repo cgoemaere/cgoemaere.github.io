@@ -56,7 +56,7 @@ Instead of local losses, we now have local perturbations that we add to the netw
 ![PC with minimal-norm perturbations](https://raw.githubusercontent.com/cgoemaere/cgoemaere.github.io/refs/heads/master/assets/img/pc_local_losses/pc_minimal_perturbations.png)
 
 The goal is to minimize the classification loss while keeping the errors as small as possible (minimal norm):\
-`$$\mathcal{L}_{PC} = \sum_i \|\|\mathbf{e_i}\|\|^2 + \mathcal{L}_{class}$$`
+`$$\mathcal{L}_{PC} = \sum_i \|\mathbf{e_i}\|^2 + \mathcal{L}_{class}$$`
 
 It's a bit similar to an adversarial attack, except that you're now trying to _improve_ the loss instead of degrade it.
 
