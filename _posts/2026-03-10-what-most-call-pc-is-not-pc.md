@@ -27,7 +27,7 @@ This forms the essence of what I like to call "the curse of biological plausibil
 
 Of course, if we had specialized brain-like hardware, a bio-plausible algorithm might (easily) outperform standard Deep Learning on GPUs. But who wants to build expensive custom hardware for an algorithm no one uses? Ultimately, we end up at a hardware lottery deadlock.
 
-![Venn diagram showing gap between brain-efficient and GPU-efficient algorithms](https://raw.githubusercontent.com/cgoemaere/cgoemaere.github.io/refs/heads/master/assets/img/what_most_call_pc_is_not_pc/hw_algo_venn.png)
+![Venn diagram showing gap between brain-efficient and GPU-efficient algorithms](https://raw.githubusercontent.com/cgoemaere/cgoemaere.github.io/refs/heads/master/assets/img/what_most_call_pc_is_not_pc/hw_algo_venn.png)\
 _A silly figure to reiterate: good brain algorithm ⟹  bad GPU algorithm_
 
 ## The (cursed) brain-inspired design of Predictive Coding
@@ -80,7 +80,7 @@ Not quite. In an amazing coincidence, PC turns out to be quite an extraordinary 
 
 This GPU-enabled PC formulation, called [ePC](https://arxiv.org/abs/2505.20137), bypasses the curse of biological plausibility and enables digital PC simulations at 100-1000x the speed. I'll spare you the technical details, but the gist of it is that backprop (which breaks all four constraints) is an excellent signal carrier, which we can exploit to speed up PC simulations and stop playing the telephone game entirely. This also means that ePC can train *much* deeper PC networks than previously possible.
 
-![Same Venn diagram, showing how PC can be both brain-efficient (sPC) and GPU-efficient (ePC)](https://raw.githubusercontent.com/cgoemaere/cgoemaere.github.io/refs/heads/master/assets/img/what_most_call_pc_is_not_pc/sPC_ePC_venn.png)
+![Same Venn diagram, showing how PC can be both brain-efficient (sPC) and GPU-efficient (ePC)](https://raw.githubusercontent.com/cgoemaere/cgoemaere.github.io/refs/heads/master/assets/img/what_most_call_pc_is_not_pc/sPC_ePC_venn.png)\
 _PC has two equivalent formulations: one for brains, one for GPUs_
 
 The price we pay is that ePC is *not* biologically plausible anymore, breaking all four of PC's original constraints. This is a feature: if you want decent speed on GPU, you need to make this tradeoff. Yet notably, ePC still emulates the _outcome_ of a bio-plausible algorithm. That is what makes PC unique: we can use ePC to study PC's learning dynamics in simulation, gaining insights that are transferable across formulations and hardware settings. I realize it's counterintuitive to use a backprop-based algorithm for research in computational neuroscience and neuromorphic hardware. But with the curse of biological plausibility, you really have no other choice.
@@ -104,3 +104,5 @@ If you care about the properties of PC's learning dynamics at a larger scale, ab
 For me, this has been quite a research journey, from discovering that a common practice is actually wrong and harmful, to understanding why that is and coming up with a solution. Although I'm proud of the outcome so far, it's not over yet.
 
 Surprisingly, this has been a hard story to sell, even though it's true and in my opinion profound. Many people dogmatically dismiss the idea of a non-bio-plausible PC algorithm, despite recognizing the issues that come with the original version. And so, without fully realizing it, they put themselves in an awkward position of having to choose: stick to what they *know* is wrong or go with what they *feel* is wrong. And while the latter is uncomfortable, the former is just absurd.
+
+---
