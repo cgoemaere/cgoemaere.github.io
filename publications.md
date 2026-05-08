@@ -7,7 +7,8 @@ head-extra: mathjax.html
 Here is a list of my current publications. Be sure to check out my [Google Scholar](https://scholar.google.be/citations?user=4BQ4DZsAAAAJ) page for a (probably) more updated version.
 
 **ePC: Fast and Deep Predictive Coding in Digital Simulation** (2026) \
-**<font color='green'>ICML 2026 - Main track</font>**  [**[ICML]**](https://icml.cc/virtual/2026/poster/60909)  [**[ArXiv]**](https://arxiv.org/pdf/2505.20137)  [**[GitHub]**](https://github.com/cgoemaere/error_based_PC)  [**[Non-technical blogpost]**](https://cgoemaere.github.io/2026-03-10-what-most-call-pc-is-not-pc/)  \
+**<font color='green'>ICML 2026 - Main track</font>**  [**[ICML]**](https://icml.cc/virtual/2026/poster/60909)  [**[ArXiv]**](https://arxiv.org/pdf/2505.20137)  [**[GitHub]**](https://github.com/cgoemaere/error_based_PC) \
+**<font color='green'>ICNCE 2026 - Abstract</font>**    [**[Non-technical blogpost]**](https://cgoemaere.github.io/2026-03-10-what-most-call-pc-is-not-pc/)  \
 **Cédric Goemaere**, Gaspard Oliviers, Rafal Bogacz, Thomas Demeester
 
 This paper tackles the problem of scalability for Predictive Coding (PC). There's a lot in this work to unpack, but I'll keep it short here. We demonstrate that standard PC is inevitably unscalable when implemented numerically (e.g., in Python code). To fill this gap, we introduce ePC, a new exact-PC numerical algorithm that scales extremely well, converging orders-of-magnitude faster and matching the performance of backpropagation. On a higher abstraction level, this work sheds light on PC's internal mechanisms and their distinct dynamics in digital simulation vs. in the physical world.
@@ -25,7 +26,7 @@ This work greatly expands the scope of the NeurIPS workshop paper below. It prov
 We show that (Hierarchical) Associative Memory can be cast as a Deep Equilibrium Model. Moreover, we identify and resolve a redundancy in synchronous updates of HAMs, and show that our solution boils down to parallellizing asynchronous updates.
 
 **Exploring the Temperature-Dependent Phase Transition in Modern Hopfield Networks** (2023) \
-**<font color='green'>NeurIPS 2023 - AMHN workshop</font>**  [**[OpenReview]**](https://openreview.net/forum?id=AXiMq2k4cb)  [**[ArXiv]**](https://arxiv.org/abs/2311.18434)  \
+**<font color='green'>NeurIPS 2023 - AMHN workshop</font>**  [**[OpenReview]**](https://openreview.net/forum?id=AXiMq2k4cb)  [**[ArXiv]**](https://arxiv.org/abs/2311.18434)  \
 Felix Koulischer, **Cédric Goemaere**, Tom Van Der Meersch, Johannes Deleu, Thomas Demeester
 
 We investigate the role of the temperature parameter $\beta$ in Modern Hopfield Networks, and identify two behavioral regimes, with a phase transition determined by a critical temperature $\beta_c$. \
